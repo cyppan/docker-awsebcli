@@ -7,4 +7,3 @@ RUN \
 	rm /var/cache/apk/*
 
 WORKDIR /aws
-ENTRYPOINT ["eb"]
