@@ -1,9 +1,4 @@
-FROM alpine:latest
+FROM python:2-slim
 
-RUN \
-	mkdir -p /aws && \
-	apk -Uuv add groff less git python py-pip && \
-	pip install awsebcli && \
-	rm /var/cache/apk/*
+RUN pip install --upgrade --no-cache-dir awsebcli
 
-WORKDIR /aws
